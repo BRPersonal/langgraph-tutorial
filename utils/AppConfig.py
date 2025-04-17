@@ -29,11 +29,7 @@ class AppConfig:
         """
         load_dotenv(override=True)
 
-        self.groq_api_key = os.getenv("GROQ_API_KEY")
         self.open_api_key = os.getenv("OPENAI_API_KEY")
-
-        if self.groq_api_key is None:
-            raise ValueError("Missing GROQ_API_KEY in .env")
 
         if self.open_api_key is None:
             raise ValueError("Missing OPENAI_API_KEY in .env")
